@@ -1,11 +1,13 @@
 {
-	"required": true,
-	"package": "de.leximon.exsecratio.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "de.leximon.exsecratio.mixin.classes",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnchantmentAccessor",
+    "EnchantmentMixin",
+    "enchantment.ItemStackMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

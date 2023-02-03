@@ -3,20 +3,20 @@
 	"id": "exsecratio",
 	"version": "${version}",
 	"name": "Exsecratio",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Curses that make you suffer",
 	"authors": [
-		"Me!"
+		"Leximon"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/exsecratio/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"de.leximon.exsecratio.ExampleMod"
+          "de.leximon.exsecratio.Exsecratio"
 		]
 	},
 	"mixins": [
@@ -28,7 +28,9 @@
 		"java": ">=17",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1887": ["de/leximon/exsecratio/mixin/extensions/EnchantmentExtension"]
+		}
 	}
 }
