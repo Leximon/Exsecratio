@@ -21,7 +21,7 @@ public class ClientPlayerInteractionManagerMixin {
     @Inject(method = "syncSelectedSlot", at = @At(value = "FIELD", target = "Lnet/minecraft/client/network/ClientPlayerInteractionManager;lastSelectedSlot:I", ordinal = 1))
     private void injectMissByDeselect(CallbackInfo ci) {
         if (AccelerationPactEnchantment.INSTANCE.shouldHandleEnchantment(client.player, client.player.getInventory().getStack(lastSelectedSlot)))
-            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(client.player).miss(false);
+            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(client.player).miss(false, false);
     }
 
 }

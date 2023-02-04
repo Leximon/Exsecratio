@@ -24,8 +24,8 @@ object BloodPactEnchantment : Enchantment(Rarity.VERY_RARE, EnchantmentTarget.AR
     override fun isTreasure() = true
     override fun isAvailableForEnchantedBookOffer() = false
     override fun isPact() = true
-    override fun getAttributes(level: Int): ImmutableMap<EntityAttribute, Pair<UUID, Double>> = ImmutableMap.of(
-        EntityAttributes.GENERIC_ATTACK_DAMAGE, Pair(ATTACK_DAMAGE_UUID, 2.0),
-        EntityAttributes.GENERIC_MAX_HEALTH, Pair(MAX_HEALTH_UUID, -2.0)
+    override fun getAttributes(level: Int) = mapOf(
+        EntityAttributes.GENERIC_ATTACK_DAMAGE to Pair(ATTACK_DAMAGE_UUID, 2.0),
+        EntityAttributes.GENERIC_MAX_HEALTH to Pair(MAX_HEALTH_UUID, -4.0)
     )
 }

@@ -19,7 +19,7 @@ public class ServerPlayNetworkHandlerMixin {
     @Inject(method = "onUpdateSelectedSlot", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerInventory;getHotbarSize()I"))
     private void injectMissByDeselect(UpdateSelectedSlotC2SPacket packet, CallbackInfo ci) {
         if (AccelerationPactEnchantment.INSTANCE.shouldHandleEnchantment(player, player.getMainHandStack()))
-            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(player).miss(false);
+            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(player).miss(false, false);
     }
 
 }

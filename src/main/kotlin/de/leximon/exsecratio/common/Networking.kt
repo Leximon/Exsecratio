@@ -7,17 +7,19 @@ import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
-import net.minecraft.entity.player.PlayerEntity
 
 private val RESET_ACCELERATION_STREAK = "reset_acceleration_streak".id()
 
 fun initServerPacketHandlers() {
-    ServerPlayNetworking.registerGlobalReceiver(RESET_ACCELERATION_STREAK) { _, player, _, _, _ ->
-        ExsecratioComponents.ACCELERATION_STREAK.get(player).miss(false)
+    ServerPlayNetworking.registerGlobalReceiver(RESET_ACCELERATION_STREAK) { _, player, _, buf, _ ->
+        val punish = buf.readBoolean()
+        ExsecratioComponents.ACCELERATION_STREAK.get(player).miss(false, punish)
     }
 }
 
 @Environment(EnvType.CLIENT)
-fun sendAccelerationStreakReset() {
-    ClientPlayNetworking.send(RESET_ACCELERATION_STREAK, PacketByteBufs.empty())
+fun sendAccelerationStreakReset(punish: Boolean) {
+    val buf = PacketByteBufs.create();
+    buf.writeBoolean(punish)
+    ClientPlayNetworking.send(RESET_ACCELERATION_STREAK, buf)
 }

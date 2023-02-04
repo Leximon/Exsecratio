@@ -6,6 +6,7 @@
 		"EnchantmentAccessor",
 		"EnchantmentMixin",
 		"enchantment.ItemStackMixin",
+		"enchantment.acceleration_pact.LivingEntityMixin",
 		"enchantment.acceleration_pact.PlayerEntityMixin",
 		"enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin"
 	],

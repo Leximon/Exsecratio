@@ -1,6 +1,7 @@
 package de.leximon.exsecratio.mixin.classes.enchantment;
 
 import de.leximon.exsecratio.Exsecratio;
+import de.leximon.exsecratio.common.enchantments.DecayCurseEnchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,7 +18,7 @@ public class ItemStackMixin {
 			ordinal = 0
 	)
 	private int injectDecayCurse(int amount) {
-		int decayCurseLevel = EnchantmentHelper.getLevel(Exsecratio.INSTANCE.getDECAY_CURSE(), (ItemStack) (Object) this);
+		int decayCurseLevel = EnchantmentHelper.getLevel(DecayCurseEnchantment.INSTANCE, (ItemStack) (Object) this);
 		if (decayCurseLevel > 0)
 			return amount * 3;
 		return amount;

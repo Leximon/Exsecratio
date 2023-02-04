@@ -16,19 +16,13 @@ public class MinecraftClientMixin {
 
     @Shadow @Nullable public ClientPlayerEntity player;
 
-    @Inject(method = "doAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerInteractionManager;attackEntity(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/entity/Entity;)V"))
-    private void injectHit(CallbackInfoReturnable<Boolean> cir) {
-        if (AccelerationPactEnchantment.INSTANCE.shouldHandleEnchantment(player, player.getMainHandStack()))
-            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(player).hit();
-    }
-
     @Inject(method = "doAttack", at = {
             @At(value = "INVOKE", target = "Lnet/minecraft/util/hit/BlockHitResult;getBlockPos()Lnet/minecraft/util/math/BlockPos;", ordinal = 0),
             @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerInteractionManager;hasLimitedAttackSpeed()Z", ordinal = 1)
     })
     private void injectMiss(CallbackInfoReturnable<Boolean> cir) {
         if (AccelerationPactEnchantment.INSTANCE.shouldHandleEnchantment(player, player.getMainHandStack()))
-            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(player).miss(true);
+            ExsecratioComponents.INSTANCE.getACCELERATION_STREAK().get(player).miss(true, true);
     }
 
 }
