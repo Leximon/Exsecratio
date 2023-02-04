@@ -20,7 +20,7 @@ object AccelerationPactEnchantment : Enchantment(Rarity.VERY_RARE, EnchantmentTa
     override fun getMaxPower(level: Int) = 50
     override fun getMaxLevel() = 1
 
-    override fun isAcceptableItem(stack: ItemStack) = if (stack.item is AxeItem) true else super.isAcceptableItem(stack)
+    override fun isAcceptableItem(stack: ItemStack) = stack.item is AxeItem || super.isAcceptableItem(stack)
     override fun isTreasure() = true
     override fun isAvailableForEnchantedBookOffer() = false
     override fun isPact() = true
