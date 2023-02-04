@@ -1,7 +1,6 @@
 package de.leximon.exsecratio.mixin.extensions;
 
 import com.google.common.collect.ImmutableMap;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.util.Pair;
 

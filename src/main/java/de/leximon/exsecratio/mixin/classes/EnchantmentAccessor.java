@@ -9,6 +9,6 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 public interface EnchantmentAccessor {
 
     @Accessor("slotTypes")
-    EquipmentSlot[] exsecratio$getSlotTypes();
+    EquipmentSlot[] exsecratio_getSlotTypes();
 
 }

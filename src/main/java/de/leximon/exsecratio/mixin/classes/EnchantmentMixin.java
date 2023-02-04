@@ -16,7 +16,6 @@ public class EnchantmentMixin implements EnchantmentExtension {
     @Inject(method = "getName", at = @At(value = "INVOKE", target = "Lnet/minecraft/text/MutableText;formatted(Lnet/minecraft/util/Formatting;)Lnet/minecraft/text/MutableText;", ordinal = 1, shift = At.Shift.BY, by = 2), locals = LocalCapture.CAPTURE_FAILHARD)
     private void injectPactName(int level, CallbackInfoReturnable<Text> cir, MutableText mutableText) {
         if (this.isPact())
-            mutableText.styled(style -> style.withColor(0xff9955));
+            mutableText.styled(style -> style.withColor(0xa95eff));
     }
-
 }

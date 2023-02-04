@@ -3,7 +3,7 @@
 	"id": "exsecratio",
 	"version": "${version}",
 	"name": "Exsecratio",
-	"description": "Curses that make you suffer",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Leximon"
 	],
@@ -11,12 +11,21 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "MIT",
+	"license": "CC0-1.0",
 	"icon": "assets/exsecratio/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "de.leximon.exsecratio.Exsecratio"
+			{
+				"value": "de.leximon.exsecratio.Exsecratio",
+				"adapter": "kotlin"
+			}
+		],
+		"cardinal-components": [
+			{
+				"value": "de.leximon.exsecratio.ExsecratioComponents",
+				"adapter": "kotlin"
+			}
 		]
 	},
 	"mixins": [
@@ -24,13 +33,17 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.13",
-		"minecraft": "~1.19.2",
+		"minecraft": "~1.19.3",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.8.10"
 	},
 	"custom": {
 		"loom:injected_interfaces": {
 			"net/minecraft/class_1887": ["de/leximon/exsecratio/mixin/extensions/EnchantmentExtension"]
-		}
+		},
+		"cardinal-components": [
+			"exsecratio:acceleration_streak"
+		]
 	}
 }

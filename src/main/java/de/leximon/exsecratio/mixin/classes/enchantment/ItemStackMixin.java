@@ -17,7 +17,7 @@ public class ItemStackMixin {
 			ordinal = 0
 	)
 	private int injectDecayCurse(int amount) {
-		int decayCurseLevel = EnchantmentHelper.getLevel(Exsecratio.DECAY_CURSE, (ItemStack) (Object) this);
+		int decayCurseLevel = EnchantmentHelper.getLevel(Exsecratio.INSTANCE.getDECAY_CURSE(), (ItemStack) (Object) this);
 		if (decayCurseLevel > 0)
 			return amount * 3;
 		return amount;
