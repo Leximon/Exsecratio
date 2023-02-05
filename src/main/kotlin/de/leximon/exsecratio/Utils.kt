@@ -2,8 +2,10 @@ package de.leximon.exsecratio
 
 import de.leximon.exsecratio.mixin.classes.EnchantmentAccessor
 import dev.onyxstudios.cca.api.v3.component.Component
+import dev.onyxstudios.cca.api.v3.component.ComponentFactory
 import dev.onyxstudios.cca.api.v3.component.ComponentKey
 import dev.onyxstudios.cca.api.v3.component.ComponentRegistryV3
+import dev.onyxstudios.cca.api.v3.entity.EntityComponentFactoryRegistry
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.entity.Entity
 import net.minecraft.entity.EquipmentSlot

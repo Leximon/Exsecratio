@@ -1,20 +1,22 @@
 {
-	"required": true,
-	"package": "de.leximon.exsecratio.mixin.classes",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"EnchantmentAccessor",
-		"EnchantmentMixin",
-		"enchantment.decay_curse.ItemStackMixin",
-		"enchantment.acceleration_pact.LivingEntityMixin",
-		"enchantment.acceleration_pact.PlayerEntityMixin",
-		"enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"client": [
-		"enchantment.acceleration_pact.ClientPlayerInteractionManagerMixin",
-		"enchantment.acceleration_pact.MinecraftClientMixin"
+  "required": true,
+  "package": "de.leximon.exsecratio.mixin.classes",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnchantmentAccessor",
+    "EnchantmentMixin",
+    "enchantment.acceleration_pact.LivingEntityMixin",
+    "enchantment.acceleration_pact.PlayerEntityMixin",
+    "enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin",
+    "enchantment.aerodynamics_pact.BowItemMixin",
+    "enchantment.aerodynamics_pact.PersistentProjectileEntityMixin",
+    "enchantment.decay_curse.ItemStackMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "enchantment.acceleration_pact.ClientPlayerInteractionManagerMixin",
+    "enchantment.acceleration_pact.MinecraftClientMixin"
 	]
 }

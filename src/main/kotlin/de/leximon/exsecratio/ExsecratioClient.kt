@@ -1,5 +1,6 @@
 package de.leximon.exsecratio
 
+import de.leximon.exsecratio.common.ModParticles
 import de.leximon.exsecratio.common.components.AccelerationStreakComponent
 import ladysnake.satin.api.event.ShaderEffectRenderCallback
 import ladysnake.satin.api.managed.ShaderEffectManager
@@ -16,6 +17,8 @@ object ExsecratioClient : ClientModInitializer {
     private var lerpedStreak = 0f
 
     override fun onInitializeClient() {
+        ModParticles.initClient()
+
         ShaderEffectRenderCallback.EVENT.register { tickDelta ->
             val streakValue = MathHelper.lerp(tickDelta, prevLerpedStreak, lerpedStreak) / AccelerationStreakComponent.MAX_STREAK.toFloat()
             if (streakValue > 0f) {

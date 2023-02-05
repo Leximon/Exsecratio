@@ -40,7 +40,8 @@
 			"net/minecraft/class_1887": ["de/leximon/exsecratio/mixin/extensions/EnchantmentExtension"]
 		},
 		"cardinal-components": [
-			"exsecratio:acceleration_streak"
+			"exsecratio:acceleration_streak",
+			"exsecratio:aerodynamic_shot"
 		]
 	}
 }

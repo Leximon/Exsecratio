@@ -17,6 +17,11 @@ repositories {
 		name = 'Ladysnake Mods'
 		url = 'https://ladysnake.jfrog.io/artifactory/mods'
 	}
+	maven {
+		name 'Modrinth'
+		url 'https://api.modrinth.com/maven'
+		content { includeGroup 'maven.modrinth' }
+	}
 }
 
 dependencies {
@@ -29,6 +34,8 @@ dependencies {
 	modImplementation include("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cardinal_components_version}")
 	modImplementation include("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cardinal_components_version}")
 	modImplementation include("io.github.ladysnake:satin:${project.satin_version}")
+
+	modRuntimeOnly "maven.modrinth:lazydfu:0.1.3"
 }
 
 processResources {

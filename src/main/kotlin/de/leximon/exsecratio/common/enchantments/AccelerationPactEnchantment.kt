@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack
 import net.minecraft.util.Pair
 import java.util.*
 
-object AccelerationPactEnchantment : Enchantment(Rarity.VERY_RARE, EnchantmentTarget.WEAPON, arrayOf(EquipmentSlot.MAINHAND)), EnchantmentExtension {
+object AccelerationPactEnchantment : Enchantment(Rarity.RARE, EnchantmentTarget.WEAPON, arrayOf(EquipmentSlot.MAINHAND)), EnchantmentExtension {
 
     private val ATTACK_SPEED_UUID = UUID.fromString("13139de4-34a6-429c-bed2-be71f2529620")
 
