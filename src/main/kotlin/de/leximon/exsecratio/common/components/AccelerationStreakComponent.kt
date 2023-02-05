@@ -1,7 +1,6 @@
 package de.leximon.exsecratio.common.components
 
 import de.leximon.exsecratio.ExsecratioComponents
-import de.leximon.exsecratio.LOGGER
 import de.leximon.exsecratio.common.sendAccelerationStreakReset
 import dev.onyxstudios.cca.api.v3.component.ComponentProvider
 import dev.onyxstudios.cca.api.v3.component.ComponentV3
@@ -18,11 +17,11 @@ import java.util.*
 class AccelerationStreakComponent(private val player: PlayerEntity) : ComponentV3, ServerTickingComponent, AutoSyncedComponent {
     companion object {
         private val MODIFIER_UUID = UUID.fromString("e1704372-3e37-4efc-bcc6-943e05e1c0ef")
-        private const val MAX_STREAK = 5.0
+        const val MAX_STREAK = 5.0
         private const val STREAK_DECAY_TIME = 60 // 2 seconds
     }
 
-    private var streak = 0
+    var streak = 0
     private var resetTicks = 0 // the amount of ticks since the last hit (or -1 if no hit was made)
     private var punishment = 0
     private var punishmentRemainingTicks = 0 // the amount of remaining ticks the punishment is active

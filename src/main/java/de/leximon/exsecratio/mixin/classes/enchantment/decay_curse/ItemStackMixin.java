@@ -1,6 +1,5 @@
-package de.leximon.exsecratio.mixin.classes.enchantment;
+package de.leximon.exsecratio.mixin.classes.enchantment.decay_curse;
 
-import de.leximon.exsecratio.Exsecratio;
 import de.leximon.exsecratio.common.enchantments.DecayCurseEnchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;

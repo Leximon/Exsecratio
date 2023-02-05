@@ -18,7 +18,7 @@ public abstract class LivingEntityMixin {
     @ModifyVariable(method = "takeKnockback", at = @At("HEAD"), ordinal = 0, argsOnly = true)
     private double modifyKnockback(double d) {
         if (EnchantmentHelper.getLevel(AccelerationPactEnchantment.INSTANCE, getMainHandStack()) > 0)
-            return d * 2;
+            return d * 1.5;
         return d;
     }
 

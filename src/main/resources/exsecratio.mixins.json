@@ -5,7 +5,7 @@
 	"mixins": [
 		"EnchantmentAccessor",
 		"EnchantmentMixin",
-		"enchantment.ItemStackMixin",
+		"enchantment.decay_curse.ItemStackMixin",
 		"enchantment.acceleration_pact.LivingEntityMixin",
 		"enchantment.acceleration_pact.PlayerEntityMixin",
 		"enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin"

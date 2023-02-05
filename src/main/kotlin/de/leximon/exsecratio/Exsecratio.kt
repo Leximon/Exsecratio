@@ -32,6 +32,7 @@ object Exsecratio : ModInitializer {
 	override fun onInitialize() {
 		initServerPacketHandlers()
 		ModifyItemAttributeModifiersCallback.EVENT.register(this::onModifyItemAttributeModifiers)
+		LOGGER.info("Exsecratio has been initialized! :D")
 	}
 
 	private fun onModifyItemAttributeModifiers(

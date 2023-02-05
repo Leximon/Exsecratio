@@ -16,16 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			{
-				"value": "de.leximon.exsecratio.Exsecratio",
-				"adapter": "kotlin"
-			}
+			{"value": "de.leximon.exsecratio.Exsecratio", "adapter": "kotlin"}
+		],
+		"client": [
+			{"value": "de.leximon.exsecratio.ExsecratioClient", "adapter": "kotlin"}
 		],
 		"cardinal-components": [
-			{
-				"value": "de.leximon.exsecratio.ExsecratioComponents",
-				"adapter": "kotlin"
-			}
+			{"value": "de.leximon.exsecratio.ExsecratioComponents", "adapter": "kotlin"}
 		]
 	},
 	"mixins": [
