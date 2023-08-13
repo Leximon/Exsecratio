@@ -6,8 +6,7 @@ import de.leximon.exsecratio.common.enchantments.BloodPactEnchantment
 import de.leximon.exsecratio.common.enchantments.DecayCurseEnchantment
 import de.leximon.exsecratio.id
 import net.minecraft.enchantment.Enchantment
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
+import net.minecraft.util.registry.Registry
 
 object ModEnchantments {
 
@@ -21,5 +20,5 @@ object ModEnchantments {
     private fun registerEnchantment(
         name: String,
         enchantment: Enchantment
-    ) = Registry.register(Registries.ENCHANTMENT, name.id(), enchantment)
+    ) = Registry.register(Registry.ENCHANTMENT, name.id(), enchantment)
 }

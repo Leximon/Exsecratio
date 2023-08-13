@@ -7,8 +7,7 @@ import net.fabricmc.api.Environment
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes
 import net.minecraft.particle.ParticleType
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
+import net.minecraft.util.registry.Registry
 
 
 object ModParticles {
@@ -26,7 +25,7 @@ object ModParticles {
     fun <T : ParticleType<*>> registerParticle(
         name: String,
         particle: T
-    ) = Registry.register(Registries.PARTICLE_TYPE, name.id(), particle)
+    ) = Registry.register(Registry.PARTICLE_TYPE, name.id(), particle)
 
 //    fun <E : ParticleEffect> registerFactory(
 //        particle: ParticleType<E>,
