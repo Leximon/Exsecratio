@@ -5,24 +5,15 @@ import com.google.common.collect.Multimap
 import de.leximon.exsecratio.common.ModDamageSources
 import de.leximon.exsecratio.common.ModEnchantments
 import de.leximon.exsecratio.common.ModParticles
-import de.leximon.exsecratio.common.enchantments.AccelerationPactEnchantment
-import de.leximon.exsecratio.common.enchantments.BloodPactEnchantment
-import de.leximon.exsecratio.common.enchantments.DecayCurseEnchantment
-import de.leximon.exsecratio.common.enchantments.AerodynamicsPactEnchantment
 import de.leximon.exsecratio.common.initServerPacketHandlers
 import de.leximon.exsecratio.mixin.extensions.EnchantmentExtension
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.ModifyItemAttributeModifiersCallback
-import net.minecraft.enchantment.Enchantment
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
-import net.minecraft.entity.damage.DamageSource
-import net.minecraft.item.BowItem
 import net.minecraft.item.ItemStack
-import net.minecraft.registry.Registries
-import net.minecraft.registry.Registry
 import net.minecraft.util.Pair
 import java.util.UUID
 
