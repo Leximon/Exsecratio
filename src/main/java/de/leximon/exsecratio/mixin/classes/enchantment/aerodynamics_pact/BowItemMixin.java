@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BowItem.class)
 public class BowItemMixin {
@@ -31,6 +32,11 @@ public class BowItemMixin {
             return speed * 1.5F;
         }
         return speed;
+    }
+
+    @Redirect(method = "onStoppedUsing", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/BowItem;getPullProgress(I)F"))
+    private float modifyPullProgress(int useTicks, ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        return AerodynamicsPactEnchantment.INSTANCE.getPullProgress(stack, useTicks);
     }
 
 

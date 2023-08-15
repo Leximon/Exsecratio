@@ -14,6 +14,8 @@ import net.minecraft.entity.EquipmentSlot
 import net.minecraft.entity.attribute.EntityAttribute
 import net.minecraft.entity.attribute.EntityAttributeModifier
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
+import net.minecraft.predicate.item.ItemPredicate
 import net.minecraft.util.Pair
 import java.util.UUID
 
