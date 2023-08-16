@@ -8,7 +8,6 @@
     "enchantment.acceleration_pact.LivingEntityMixin",
     "enchantment.acceleration_pact.PlayerEntityMixin",
     "enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin",
-    "enchantment.aerodynamics_pact.BowAttackGoalMixin",
     "enchantment.aerodynamics_pact.BowItemMixin",
     "enchantment.aerodynamics_pact.PersistentProjectileEntityMixin",
     "enchantment.decay_curse.ItemStackMixin"
