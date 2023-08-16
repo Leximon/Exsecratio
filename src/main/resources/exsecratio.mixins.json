@@ -10,15 +10,17 @@
     "enchantment.acceleration_pact.ServerPlayNetworkHandlerMixin",
     "enchantment.aerodynamics_pact.BowItemMixin",
     "enchantment.aerodynamics_pact.PersistentProjectileEntityMixin",
-    "enchantment.decay_curse.ItemStackMixin"
+    "enchantment.decay_curse.ItemStackMixin",
+    "enchantment.reflection_curse.MobEntityMixin",
+    "enchantment.reflection_curse.PlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "enchantment.aerodynamics_pact.AbstractClientPlayerEntityMixin",
     "enchantment.acceleration_pact.ClientPlayerInteractionManagerMixin",
     "enchantment.acceleration_pact.MinecraftClientMixin",
+    "enchantment.aerodynamics_pact.AbstractClientPlayerEntityMixin",
     "enchantment.aerodynamics_pact.ModelPredicateProviderRegistryMixin"
   ]
 }

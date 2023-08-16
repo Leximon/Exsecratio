@@ -2,10 +2,7 @@ package de.leximon.exsecratio
 
 import com.google.common.collect.Maps
 import com.google.common.collect.Multimap
-import de.leximon.exsecratio.common.ModDamageSources
-import de.leximon.exsecratio.common.ModEnchantments
-import de.leximon.exsecratio.common.ModParticles
-import de.leximon.exsecratio.common.initServerPacketHandlers
+import de.leximon.exsecratio.common.*
 import de.leximon.exsecratio.mixin.extensions.EnchantmentExtension
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.ModifyItemAttributeModifiersCallback
@@ -25,6 +22,7 @@ object Exsecratio : ModInitializer {
 		ModDamageSources.init()
 		ModEnchantments.init()
 		ModParticles.init()
+		ModSounds.init()
 
 		initServerPacketHandlers()
 		ModifyItemAttributeModifiersCallback.EVENT.register(this::onModifyItemAttributeModifiers)

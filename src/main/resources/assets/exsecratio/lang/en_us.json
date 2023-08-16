@@ -1,7 +1,10 @@
 {
   "enchantment.exsecratio.decay_curse": "Curse of Decay",
+  "enchantment.exsecratio.reflection_curse": "Curse of Reflection",
   "enchantment.exsecratio.blood_pact": "Pact of Blood",
   "enchantment.exsecratio.acceleration_pact": "Pact of Acceleration",
   "enchantment.exsecratio.aerodynamics_pact": "Pact of Aerodynamics",
-  "death.attack.shot_missed": "%1$s will be missed just like their shots"
+  "death.attack.shot_missed": "%1$s will be missed just like their shots",
+  "death.attack.reflected": "%1$s hit themself whilst fighting %2$s",
+  "death.attack.reflected.item": "%1$s hit themself whilst fighting %2$s wielding %3$s"
 }

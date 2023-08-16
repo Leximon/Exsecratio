@@ -1,0 +1,11 @@
+{
+  "reflection_hit": {
+    "sounds": [
+      {
+        "name": "minecraft:item.trident.hit",
+        "volume": 1,
+        "pitch": 2.0
+      }
+    ]
+  }
+}
