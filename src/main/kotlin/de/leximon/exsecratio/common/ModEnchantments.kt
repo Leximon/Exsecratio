@@ -3,7 +3,8 @@ package de.leximon.exsecratio.common
 import de.leximon.exsecratio.common.enchantments.*
 import de.leximon.exsecratio.id
 import net.minecraft.enchantment.Enchantment
-import net.minecraft.util.registry.Registry
+import net.minecraft.registry.Registries
+import net.minecraft.registry.Registry
 
 object ModEnchantments {
 
@@ -18,5 +19,5 @@ object ModEnchantments {
     private fun registerEnchantment(
         name: String,
         enchantment: Enchantment
-    ) = Registry.register(Registry.ENCHANTMENT, name.id(), enchantment)
+    ) = Registry.register(Registries.ENCHANTMENT, name.id(), enchantment)
 }

@@ -31,7 +31,7 @@ public abstract class PersistentProjectileEntityMixin extends ProjectileEntity {
         if (component != null && component.isAerodynamicShot()) {
             Entity owner = this.getOwner();
             if (owner != null)
-                owner.damage(ModDamageSources.INSTANCE.getSHOT_MISSED(), 2.0F);
+                owner.damage(owner.getWorld().getDamageSources().create(ModDamageSources.INSTANCE.getSHOT_MISSED()), 2.0F);
             component.setAerodynamicShot(false);
         }
     }

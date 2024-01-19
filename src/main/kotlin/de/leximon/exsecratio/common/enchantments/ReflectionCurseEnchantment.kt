@@ -18,8 +18,8 @@ object ReflectionCurseEnchantment : Enchantment(Rarity.RARE, EnchantmentTarget.W
     override fun isTreasure() = true
     override fun isCursed() = true
 
-    fun applyTo(entity: LivingEntity, target: Entity, weapon: ItemStack) {
-        entity.damage(ModDamageSources.ReflectedDamageSource(target, weapon), 1f)
+    fun applyTo(entity: LivingEntity, target: Entity) {
+        entity.damage(entity.world.damageSources.create(ModDamageSources.REFLECTED, entity, target), 1f)
         entity.playSound(ModSounds.REFLECTION_HIT, 1f, 1f);
     }
 }

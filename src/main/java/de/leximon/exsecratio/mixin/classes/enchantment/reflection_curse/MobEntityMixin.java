@@ -23,9 +23,8 @@ public abstract class MobEntityMixin extends LivingEntity {
 
     @Inject(method = "tryAttack", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentHelper;getFireAspect(Lnet/minecraft/entity/LivingEntity;)I"))
     private void injectReflectionCurse(Entity target, CallbackInfoReturnable<Boolean> cir) {
-        ItemStack itemStack = this.getEquippedStack(EquipmentSlot.MAINHAND);
         if (EnchantmentHelper.getEquipmentLevel(ReflectionCurseEnchantment.INSTANCE, this) > 0)
-            ReflectionCurseEnchantment.INSTANCE.applyTo(this, target, itemStack);
+            ReflectionCurseEnchantment.INSTANCE.applyTo(this, target);
     }
 
 }

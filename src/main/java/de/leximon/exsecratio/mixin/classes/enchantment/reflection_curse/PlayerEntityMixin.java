@@ -24,9 +24,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Inject(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentHelper;getFireAspect(Lnet/minecraft/entity/LivingEntity;)I"))
     private void injectReflectionCurse(Entity target, CallbackInfo ci) {
-        ItemStack itemStack = this.getEquippedStack(EquipmentSlot.MAINHAND);
         if (EnchantmentHelper.getEquipmentLevel(ReflectionCurseEnchantment.INSTANCE, this) > 0)
-            ReflectionCurseEnchantment.INSTANCE.applyTo(this, target, itemStack);
+            ReflectionCurseEnchantment.INSTANCE.applyTo(this, target);
     }
 
 }
